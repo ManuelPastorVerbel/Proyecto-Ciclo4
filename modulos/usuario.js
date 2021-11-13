@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-let Usuario = new mongoose.Schema({
+var Usuario = new mongoose.Schema({
     nombreUsuario:{
         type: String,
         required: true,
@@ -30,12 +30,12 @@ let Usuario = new mongoose.Schema({
         maxLength: 50
     },
 
-    claveUsusario:{
+    claveUsuario:{
         type: String,
         required: true,
         maxLength: 20
     },
  });
 
-var usuario =mongoose.model('Usuario',Usuario,'Usuarios');
+const usuario =mongoose.model('Usuario',Usuario,'Usuarios');
  module.exports= usuario;
