@@ -1,5 +1,5 @@
 const mongoose= require('mongoose');
-
+const { ObjectId } = require('bson')
 var Usuario = new mongoose.Schema({
     nombreUsuario:{
         type: String,
