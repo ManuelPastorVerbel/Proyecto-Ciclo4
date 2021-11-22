@@ -9,7 +9,7 @@ var ngApp = angular.module('myApp', []);
                 }
                 $scope.createTodo = function () {
                     $http
-                    .post("http://localhost:8000/registro", $scope.formData)
+                    .post("http://localhost:3000/registro", $scope.formData)
                     .then(function successCallback(response)  {
                      // $scope.formData = {};
                       $scope.todos = response.data;

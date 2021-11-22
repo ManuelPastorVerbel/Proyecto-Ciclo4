@@ -1,45 +1,692 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../public/imagenes/icono1.png" type="image/x-icon" >
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <title>Home</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Inmobiliaria RETHINK</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand text-white" >InmoRemax</a>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                         <li class="nav-item">
-                            <a class="nav-link text-white" >Home</a>
-                         </li>
-                         <li class="nav-item ">
-                            
-                            <a class="nav-link text-white" href="http://localhost:3000/registro">Registrate</a>
-                           
-                         </li>
-                     </ul>
-                
-                </div>
-                <div class="bg-warning ">
-                    <ul class="nav nav-pills">
-                        <li class="nav-item">
-                          <a class="nav-link text-white "  href="RegistrarInmueble.html">Publica Gratis</a>
-                          
-                        </li>
-                </div>       
+
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+        <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+            <div class="align-items-center d-none d-md-flex">
+                <i class="bi bi-clock"></i> Lunes - Viernes, 8AM a 6PM - Sábado, 8AM a 12M
             </div>
-        </nav>
+            <div class="d-flex align-items-center">
+                <i class="bi bi-phone"></i> Llámanos ahora al 310 396 5759
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
+
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto " href="#hero">Inicio</a></li>
+                    <li><a class="nav-link scrollto" href="#about">Sobre nosotros</a></li>
+                    <li><a class="nav-link scrollto" href="#services">Productos & Servicios</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contáctenos</a></li>
+                    <li><a class="nav-link scrollto" href="login.html">Ingresar</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+            <a href="http://localhost:3000/registro" class="appointment-btn scrollto"><span class="d-none d-md-inline">Regístrate</a>
+            <a href="http://localhost:3000/registroInmueble" class="appointment-btn scrollto"><span class="d-none d-md-inline">Publica Gratis</a>    
+
+        </div>
     </header>
-    
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
+                    <div class="container">
+                        <h2>Bienvenido a <span>Inmobiliaria RETHINK</span></h2>
+                        <p>Casas, bodegas, locales comerciales, apartamentos, fincas, haciendas, compra y arrendo.
+                        </p>
+                        <a href="#about" class="btn-get-started scrollto">Leer mas</a>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
+                    <!-- <div class="container">
+                        <h2>Servicios</h2>
+                        <p>Conoce nuestro catálogo de productos y servicios que ofrecemos para tus mascotas. Recuerda que también tenemos planes compuestos mensuales.</p>
+                        <a href="#services" class="btn-get-started scrollto">Ver más</a>
+                    </div> -->
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Featured Services Section ======= -->
+        <section id="featured-services" class="featured-services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                            <h4 class="title"><a href="">Arriendos</a></h4>
+                            <p class="description">Tenemos un amplio catalogo de propiedades para arrendar.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon"><i class="fas fa-pills"></i></div>
+                            <h4 class="title"><a href="">Ventas</a></h4>
+                            <p class="description">Cuentenos su presupuesto y nosotros hacemos lo demás.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon"><i class="fas fa-thermometer"></i></div>
+                            <h4 class="title"><a href="">Avaluos</a></h4>
+                            <p class="description">Le ayudamos a conocer el precio justo y real de su inmueble .</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon"><i class="fas fa-dna"></i></div>
+                            <h4 class="title"><a href="">Corretaje</a></h4>
+                            <p class="description">Representamos su inmueble como si fuera propio.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Featured Services Section -->
+
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="text-center">
+                    <h3> ¿Quieres arrendar? - ¿O prefieres tu propia casa?</h3>
+                    <p>Somos un equipo de trabajo enfocado al servicio al cliente, quien es nuestra razón de ser, trabajando con eficiencia, honestidad y respeto, tenemos un amplio portafolio de servicios que nos permite ofrecerle soluciones efectivas a los requerimientos de carácter inmobiliario de nuestros compradores.</p>
+                    <a class="cta-btn scrollto" href="#registrate">Regístrate</a>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Cta Section -->
+
+        <!-- ======= About Us Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Sobre Nosotros</h2>
+                    <p>…Como podemos ayurdarte?<br> Somos una empresa inmobiliaria con gran reconocimiento en el mercado. Contamos con un equipo de ejecutivos especializados dispuestos a prestar un servicio integral y amable buscando la forma de satisfacer
+                        sus necesidades, asesorando y respondiendo todas las inquietudes a la hora de vender, arrendar o avaluar su inmueble o proyecto..
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+                        <h3>Misión</h3>
+                        <p class="fst-italic">
+                            Liderar el sector inmobiliario de la Universidad de Caldas, siendo la empresa más reconocida por los colombianos manteniendo nuestros clientes actuales y potenciales con la mejor calidad en nuestros servicios por medio de una constante actualización en
+                            todos los temas involucrados con finca raíz.
+                        </p>
+                        <h3>Visión</h3>
+                        <p>
+                            Satisfacer las necesidades de nuestros clientes en sus operaciones inmobiliarias con una administración profesional, responsable y honesta, un servicio de calidad y asesoría permanente basado en una capacitación y actualización tecnológica continua de
+                            nuestras diferentes áreas, arrendamientos, ventas y avalúos.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End About Us Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="services" class="services services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Servicios</h2>
+                    <p>Toda la atención y calidad humana de nuestros asesores a su servicio.</p>
+                </div>
+
+                <div class="row">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/gallery/casa1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h4>Casa</h4>
+                                <h5>Rincon Del Chico</h5>
+                                <p>
+                                    Casa En Conjunto Cerrado, 3 Niveles Mas Sótano: Primer Piso: Sala-Comedor Con Chimenea Tradicional, Baño Social, Cocina Cerrada A Gas, Segundo Nivel: Estar De TV O Estudio, 3 Alcobas, 2 Baños, Tercer ... Ver Mas</p>
+                                <br>
+                                <h3>$ 875.000.000</h3>
+                                <table>
+                                    <tr>
+                                        <th>Area</th>
+                                        <th>Habs</th>
+                                        <th>Baños</th>
+                                        <th>Parq</th>
+                                    </tr>
+                                    <tr align="center">
+                                        <td>171 M²</td>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>2</td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/gallery/casa2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h4>Casa</h4>
+                                <h5>Lisboa</h5>
+                                <p>
+                                    106 Metros Área Privada, Para Remodelar, Ascensor, 2 Habitaciones Amplias, Estudio Independiente Amplio, Chimenea, 2 Baños, Cocina Amplia, 1 Garaje Cubierto Independiente, Portería 24 Hora, ... Ver Mas
+                                    <br>
+                                    <h3>$ 530.000.000</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Area</th>
+                                            <th>Habs</th>
+                                            <th>Baños</th>
+                                            <th>Parq</th>
+                                        </tr>
+                                        <tr align="center">
+                                            <td>106 M²</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </table>
+                                </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/gallery/casa3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h4>Casa</h4>
+                                <h5>Rincon Del Chico</h5>
+                                <p>
+                                    Casa En Conjunto Cerrado, 3 Niveles Mas Sótano: Primer Piso: Sala-Comedor Con Chimenea Tradicional, Baño Social, Cocina Cerrada A Gas, Segundo Nivel: Estar De TV O Estudio, 3 Alcobas, 2 Baños, Tercer ... Ver Mas</p>
+                                <br>
+                                <h3>$ 875.000.000</h3>
+                                <table>
+                                    <tr>
+                                        <th>Area</th>
+                                        <th>Habs</th>
+                                        <th>Baños</th>
+                                        <th>Parq</th>
+                                    </tr>
+                                    <tr>
+                                        <td>171 M²</td>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>2</td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/gallery/casa4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h4>Casa</h4>
+                                <h5>Rincon Del Chico</h5>
+                                <p>
+                                    Casa En Conjunto Cerrado, 3 Niveles Mas Sótano: Primer Piso: Sala-Comedor Con Chimenea Tradicional, Baño Social, Cocina Cerrada A Gas, Segundo Nivel: Estar De TV O Estudio, 3 Alcobas, 2 Baños, Tercer ... Ver Mas</p>
+                                <br>
+                                <h3>$ 875.000.000</h3>
+                                <table>
+                                    <tr>
+                                        <th>Area</th>
+                                        <th>Habs</th>
+                                        <th>Baños</th>
+                                        <th>Parq</th>
+                                    </tr>
+                                    <tr>
+                                        <td>171 M²</td>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>2</td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/gallery/casa3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h4>Casa</h4>
+                                <h5>Rincon Del Chico</h5>
+                                <p>
+                                    Casa En Conjunto Cerrado, 3 Niveles Mas Sótano: Primer Piso: Sala-Comedor Con Chimenea Tradicional, Baño Social, Cocina Cerrada A Gas, Segundo Nivel: Estar De TV O Estudio, 3 Alcobas, 2 Baños, Tercer ... Ver Mas</p>
+                                <br>
+                                <h3>$ 875.000.000</h3>
+                                <table>
+                                    <tr>
+                                        <th>Area</th>
+                                        <th>Habs</th>
+                                        <th>Baños</th>
+                                        <th>Parq</th>
+                                    </tr>
+                                    <tr>
+                                        <td>171 M²</td>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>2</td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/img/gallery/casa7.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">
+                                <h4>Casa</h4>
+                                <h5>Rincon Del Chico</h5>
+                                <p>
+                                    Casa En Conjunto Cerrado, 3 Niveles Mas Sótano: Primer Piso: Sala-Comedor Con Chimenea Tradicional, Baño Social, Cocina Cerrada A Gas, Segundo Nivel: Estar De TV O Estudio, 3 Alcobas, 2 Baños, Tercer ... Ver Mas</p>
+                                <br>
+                                <h3>$ 875.000.000</h3>
+                                <table>
+                                    <tr>
+                                        <th>Area</th>
+                                        <th>Habs</th>
+                                        <th>Baños</th>
+                                        <th>Parq</th>
+                                    </tr>
+                                    <tr>
+                                        <td>171 M²</td>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>2</td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Services Section -->
+        <!-- ======= Appointment Section ======= --
+        <section id="registrate" class="appointment section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2> ¿En una emergencia? ¿Necesitas ayuda ahora?</h2>
+                    <p>El servicio incluye, valoración y estabilización del paciente por medio de los procedimientos que el profesional considere necesarios de acuerdo con el caso específico de la mascota</p>
+                </div>
+
+                <form action="" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <input type="text" name="nombres" class="form-control" id="nombres" placeholder="Nombres" required>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <input type="text" name="apellidos" class="form-control" id="apellidos" placeholder="Apellidos" required>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <input type="text" name="numeroDocumento" class="form-control" id="numeroDocumento" placeholder="Número documento" required>
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" required>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Registrarse</button></div>
+                </form>
+
+            </div>
+        </section>
+        <!-- End Appointment Section -->
+
+        <!-- ======= Gallery Section ======= -->
+        <section id="gallery" class="gallery">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Galeria</h2>
+                </div>
+                <div class="gallery-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa1.jpg"><img src="assets/img/gallery/casa1.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa2.jpg"><img src="assets/img/gallery/casa2.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa3.jpg"><img src="assets/img/gallery/casa3.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa4.jpg"><img src="assets/img/gallery/casa4.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa5.jpg"><img src="assets/img/gallery/casa5.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa6.jpg"><img src="assets/img/gallery/casa6.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa7.jpg"><img src="assets/img/gallery/casa7.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a class="gallery-lightbox" href="assets/img/gallery/casa8.jpg"><img src="assets/img/gallery/casa8.jpg" class="img-fluid" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Gallery Section -->
+
+
+        <!-- ======= Frequently Asked Questioins Section ======= -->
+        <section id="faq" class="faq section-bg">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>PREGUNTAS FRECUENTES</h2>
+
+                </div>
+
+                <ul class="faq-list">
+
+                    <li>
+                        <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">¿Por qué se debe hacer un avalúo?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i>
+                        </div>
+                        <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Si usted se está cuestionando el valor del arriendo o venta de su futura propiedad, un avalúo le dará a conocer el valor comercial de ese inmueble. También servirá para hacer la solicitud de un crédito hipotecario o una sucesión testamentaria.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">¿Cuál es el valor que se cobra por el arrendamiento de una propiedad?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Cada una de las diferentes empresas inmobiliarias trabaja bajo sus reglas, pero en el caso de Inmobiliaria RETHINK realizamos el cobro del 10% sobre el valor del canon original de arrendamiento.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">¿Qué es el seguro de arrendamiento?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Algunas propiedades suelen ofrecer respaldo al propietario en caso de que el nuevo inquilino incumpla sus obligaciones, sea las cuotas de administración, pagos mensuales de arriendo o los servicios públicos durante la vigencia del contrato.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">¿Se realizará un inventario de inmuebles?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                Es común que las inmobiliarias reconocidas Se encarguen de realizar junto con el propietario una lista con los muebles o características del inmueble al momento de ser entregado, el cual debe ser firmado para que la entrega sea exactamente igual.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">¿Podrá tener mascotas?<i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                La decisión es totalmente del propietario, algunos consideran que prefieren no aceptarlos porque deteriora la propiedad; sin embargo es una pregunta que debe hacerle al dueño a la hora de adquirir un nuevo hogar.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">¿Cuanto incrementa el canon de arrendamiento?
+                            <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                        <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                            <p>
+                                En contratos de arrendamiento de vivienda urbana, la ley 820 de 2003 establece que el canon se podrá incrementar hasta en una porción del 100% del IPC (Índice de Precios al Consumidor) del año calendario inmediatamente anterior.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+        <!-- End Frequently Asked Questioins Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Contactanos</h2>
+                    <p>Cinco sedes a nivel del pais, con servicios especiales de atención de urgencias veterinarias y servicios relacionados con la atención en prevención de la salud de mascotas</p>
+                </div>
+
+            </div>
+
+            <div>
+                <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4844302.61020303!2d-75.87025543985948!3d4.395622049116744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sbg!4v1637202742129!5m2!1ses-419!2sbg"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="container">
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-6">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="info-box">
+                                    <i class="bx bx-map"></i>
+                                    <h3>Nuestra dirección</h3>
+                                    <p>Colombia, Bogotá</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box mt-4">
+                                    <i class="bx bx-envelope"></i>
+                                    <h3>E-Mail</h3>
+                                    <p>info@inmobiliariarethink.com<br>contact@inmobiliariarethink.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box mt-4">
+                                    <i class="bx bx-phone-call"></i>
+                                    <h3>Llamanos</h3>
+                                    <p>318 358 8798<br>319 274 2596</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <div class="row">
+                                <div class="col form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Su nombre" required>
+                                </div>
+                                <div class="col form-group mt-3">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Su E-Mail" required>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>Inmobiiaria RETHINK</h3>
+                            <p>
+                                Colombia <br><br><br>
+                                <strong>Phone:</strong> 318 358 8798 <br>
+                                <strong>Email:</strong> info@inmobiliariarethink.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Enlaces útiles</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#home">Inicio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#about">Sobre nosotros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Servicios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>THE EAGLE PROGRAMMERS</span></strong>. Reservados todos los derechos
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
