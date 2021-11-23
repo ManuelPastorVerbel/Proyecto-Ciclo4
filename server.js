@@ -20,7 +20,7 @@ var router = express.Router();
 const HTML_CONTENT_TYPE = 'text/html'
 //modulos de la aplicación 
 
-var Usuario = require('./modulos/usuario.js');
+const Usuario = require('./modulos/usuario.js');
 var Zona = require('./modulos/zona.js');
 var Inmobiliario = require('./modulos/inmobilario');
 
@@ -36,7 +36,7 @@ app.use(router);
 // middleware para proceso de data
 var jsonParser = bodyParser.json();
 app.use(express.json());
-app.use(express.urlencoded({ extended:true }));
+app.use(express.urlencoded({ extended:false }));
 
 
 
@@ -57,15 +57,19 @@ app.use(express.static(path.join(__dirname, '/public')));
  });
 // middleware para procesar el formulario de Usuario
 
-app.post('/registro',jsonParser,(req, res)=>{
-  var myobj = { nombreUsuario:req.body.nombreUsuario, apellidoUsuario:req.body.apellidoUsuario, cedulaUsuario:req.body.cedulaUsuario, correoUsuario:req.body.correoUsuario, claveUsuario:req.body.claveUsuario };
+app.post('/registro',(req, res)=>{
+  const usuario = Usuario(req.body)
+  usuario.save().then((data) => res.json(data)).catch((err) => res.json({message: err}))
+
+  /*var myobj = { nombreUsuario:req.body.nombreUsuario, apellidoUsuario:req.body.apellidoUsuario, cedulaUsuario:req.body.cedulaUsuario, correoUsuario:req.body.correoUsuario, claveUsuario:req.body.claveUsuario };
   Usuario.collection.insertOne(myobj, function(err, res) {
     if (err) throw err;
   
     });
     res.send("respuesta del servidor");
-    res.redirect('/home.html');
+    res.redirect('/home.html');*/
   })
+  
     
   app.get('/', (req, res) => {
   res.writeHead(200, { 'Content-Type': HTML_CONTENT_TYPE })
@@ -81,7 +85,7 @@ app.post('/registro',jsonParser,(req, res)=>{
 
 //iniciar el servidor por el puerto
 app.use(router);
-app.listen(3000);
+app.listen(8000);
 
 console.log('la aplicacion esta en linea');
 

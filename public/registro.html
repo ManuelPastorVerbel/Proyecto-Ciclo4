@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="./main2.js"></script>
+    
     <title>Registrarte</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
@@ -26,7 +26,7 @@
     <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
     <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
     <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
-
+    <script src="./main2.js"></script>
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -59,7 +59,7 @@
                                     
                                     </div>
 
-                                    <form class="row g-3 needs-validation" novalidate>
+                                    <form class="row g-3 needs-validation" action="/registro" method="post"novalidate>
 
                                         <div class="col-12">
                                             <label for="nombreUsuario" class="form-label">Nombres</label>
@@ -87,10 +87,17 @@
                                             <label for="correoUsuario" class="form-label">Correo</label>
                                             <div class="input-group has-validation">                                           
                                              <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                             <input type="text" name="correoUsuario" class="form-control" id="correoUsuario"  ng-model="formData.CorreoUsuario"required>
+                                             <input type="text" name="correoUsuario" class="form-control" id="correoUsuario"  ng-model="formData.correoUsuario"required>
                                              <div class="invalid-feedback">¡Por favor, introduzca su correo!</div>
                                             </div>
                                         </div>
+                                        <div class="col-12">
+                                            <label for="celularUsuario" class="form-label">Celular</label>
+                                            <div class="input-group has-validation">
+                                              <span class="input-group-text" id="inputGroupPrepend">N°</span>
+                                              <input type="text" name="celularUsuario" class="form-control" id="celularUsuario" ng-model="formData.celularUsuario" required>
+                                              <div class="invalid-feedback">¡Por favor, introduzca su cedula!</div>
+                                            </div>
                                         <div class="col-12">
                                             <label for="claveUsuario" class="form-label">Clave</label>
                                             <input type="text" name="claveUsuario" class="form-control" id="claveUsuario"  ng-model="formData.claveUsuario"required>
