@@ -89,12 +89,14 @@
                                               </select>
                                         </div>
                                         <div class="col-12">
-                                            <label for="oferta" class="form-label">Oferta</label>
-                                            <div class="input-group has-validation">
-                                              <span class="input-group-text" id="oferta">N°</span>
-                                              <input type="text" name="oferta" class="form-control" id="oferta" required>
-                                              <div class="invalid-feedback">¡Por favor, introduzca su cedula!</div>
-                                            </div>
+                                            <label for="oferta"class="form-label">Oferta</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Seleciona la oferta del inmueble</option>
+                                                <option value="1">Venta</option>
+                                                <option value="2">Arriendo</option>
+                                                <option value="3">Vacacional</option>
+
+                                              </select>
                                         </div>
                                         <div class="col-12">
                                             <label for="habitaciones" class="form-label">Habitaciones</label>
@@ -113,9 +115,7 @@
                                         <div class="col-12">
                                             <button class="btn btn-primary w-100" type="submit">Enviar</button>
                                         </div>
-                                        <div class="col-12">
-                                            <p class="small mb-0">¿No tienes cuenta? <a href="index.html#register">Crea una cuenta</a></p>
-                                        </div>
+                                        
                                     </form>
 
                                 </div>
